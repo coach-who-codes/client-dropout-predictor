@@ -1,0 +1,70 @@
+{
+  "trained_at": "2026-10-23T23:54:01+00:00",
+  "n_clients": 4000,
+  "dropout_rate": 0.2552,
+  "selected_model": "logistic_regression",
+  "threshold": 0.16,
+  "cross_validation": {
+    "logistic_regression": {
+      "threshold": 0.16,
+      "roc_auc": 0.8537,
+      "pr_auc": 0.6954,
+      "brier": 0.1258,
+      "precision": 0.4665,
+      "recall": 0.869,
+      "flagged_share": 0.4756,
+      "savings_inr": 1475500.0,
+      "savings_per_100_clients_inr": 46109.375
+    },
+    "random_forest": {
+      "threshold": 0.17,
+      "roc_auc": 0.8451,
+      "pr_auc": 0.6834,
+      "brier": 0.128,
+      "precision": 0.4523,
+      "recall": 0.8531,
+      "flagged_share": 0.4816,
+      "savings_inr": 1425050.0,
+      "savings_per_100_clients_inr": 44532.8125
+    },
+    "gradient_boosting": {
+      "threshold": 0.14,
+      "roc_auc": 0.8372,
+      "pr_auc": 0.6676,
+      "brier": 0.1345,
+      "precision": 0.4615,
+      "recall": 0.8213,
+      "flagged_share": 0.4544,
+      "savings_inr": 1386650.0,
+      "savings_per_100_clients_inr": 43332.8125
+    }
+  },
+  "test": {
+    "roc_auc": 0.828,
+    "pr_auc": 0.6457,
+    "brier": 0.1377,
+    "precision": 0.4326,
+    "recall": 0.8333,
+    "flagged_share": 0.4913,
+    "savings_inr": 339000.0,
+    "savings_per_100_clients_inr": 42375.0,
+    "confusion_matrix": {
+      "tn": 373,
+      "fp": 223,
+      "fn": 34,
+      "tp": 170
+    }
+  },
+  "top_features": {
+    "engagement_index": 0.483,
+    "weight_progress_pct": 0.3541,
+    "plan_months": 0.2689,
+    "attendance_trend": 0.2679,
+    "referred": 0.262,
+    "is_new_client": 0.2369,
+    "uses_app": 0.1943,
+    "attendance_rate_4w": 0.1852,
+    "plan_type": 0.161,
+    "support_msgs_30d": 0.1338
+  }
+}
