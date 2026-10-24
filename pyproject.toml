@@ -1,0 +1,25 @@
+[project]
+name = "client-dropout-predictor"
+version = "1.0.0"
+description = "Predict which personal-training clients will drop out, explain why, and suggest a retention action"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amit Dubey" }]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["B905"]  # zip() over arrays of equal length by construction
+
+[tool.ruff.lint.per-file-ignores]
+"api/main.py" = ["E402"]
+"app/*.py" = ["E402"]
